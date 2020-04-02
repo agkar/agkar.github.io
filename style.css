@@ -137,7 +137,7 @@ position: absolute;
 bottom:8px;
 width:100%;
 text-align:center;
-/*font-family: "Roboto", "Lucida Grande", Helvetica, Arial, sans-serif;*/
+font-family: "Roboto", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .dot {
