@@ -140,6 +140,21 @@ footer {
 	font-weight: bold;
 }
 
+.project-description a {
+	color: firebrick;
+	text-decoration: none;
+}
+
+.project-description a:visited {
+	color: firebrick;
+	text-decoration: none;
+}
+
+.project-description a:hover {
+	color: firebrick;
+	text-decoration: underline;
+}
+
 /* Projects Carousel*/
 
 .project-carousel-container {
