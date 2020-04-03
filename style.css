@@ -1,10 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/*font-family: "Roboto", "Lucida Grande", Helvetica, Arial, sans-serif*/
+}
+
 p {
-color: rgb(20,20,20);
-font-size: 16px;
+	color: rgb(20,20,20);
+	font-size: 16px;
 }
 
 h1 {
-color: rgb(20,20,20);
+	color: rgb(20,20,20);
+}
+
+body {
+	box-sizing: border-box;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	margin:0;
+}
+
+main {
+	max-width: 1000px;
+	margin:auto;
 }
 
 header {
@@ -15,13 +37,17 @@ background-image: linear-gradient(gray, rgb(81,81,81));
 background-image: linear-gradient(rgb(111,111,111), rgb(41,41,41));
 text-align: right;
 padding: 36px 8px 6px 16px;
+width: 100%;
+border: 0;
+outline: 0;
+margin-bottom: 12pt; /*12pt = 16px*/
 /* New addition for border */
-/*border-bottom: 3px solid orange;
-width:100%;
-position:absolute;
-top:0;
-left:0;
-box-sizing : border-box;*/
+/*border-bottom: 3px solid orange;*/
+}
+
+nav {
+	max-width: 1000px;
+	margin: auto;
 }
 
 .site-links {
@@ -35,6 +61,32 @@ height: 200%;
 
 .site-links:hover {
 	color:orange;
+}
+
+footer {
+	clear: both;
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 36pt;
+}
+
+
+.github-btn {
+	/*background-image: url('images/GitHub-Mark-64px.png');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;*/
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+/*@media screen and (max-width: 992px) {*/
+@media screen and (max-width: 910px) {
+
 }
 
 
@@ -281,15 +333,6 @@ overflow:hidden;
   }*/
 }
 
-/*   FOOTER   */
-
-footer {
-clear: both;
-}
-
-footer a:visited {
-	color:blue;
-}
 
 .pub-media-container {
 margin: 0;

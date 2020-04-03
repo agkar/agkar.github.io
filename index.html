@@ -14,7 +14,7 @@
 </head>
 
 
-<body id="top" style='font-family: "Roboto", "Lucida Grande", Helvetica, Arial, sans-serif'>
+<body id="top">
 	<header>
 		<nav>
 			<a class="site-links" href="index.html">Home</a> |
@@ -23,111 +23,114 @@
 			<a class="site-links" href="resume.html">Resume</a> |
 			<a class="site-links" href="about.html">About</a>
 		</nav>
-
 	</header>
 
-	<br>
-	<article class="project-carousel-container">
-		<div class="project-carousel-slides fade">
-			<img src="publications/seh.jpg" alt="projects" style="width:1000px;height:400px;">
-			<div class="project-carousel-text">Detail Highlighting using a Shadow Edge Histogram</div>
+	<main>
+		<article class="project-carousel-container">
+			<div class="project-carousel-slides fade">
+				<img src="publications/seh.jpg" alt="projects" style="width:1000px;height:400px;">
+				<div class="project-carousel-text">Detail Highlighting using a Shadow Edge Histogram</div>
+			</div>
+			<div class="project-carousel-slides fade">
+				<img src="publications/crc.jpg" alt="projects" style="width:1000px;height:400px;">
+				<div class="project-carousel-text">Real-time Radiance Caching using Chrominance Compressions</div>
+			</div>
+			<div class="project-carousel-slides fade">
+				<img src="publications/teaserSeh.jpg" alt="projects" style="width:1000px;height:400px;">
+				<div class="project-carousel-text">Light Optimization for Detail Highlighting</div>
+			</div>
+			<a class="project-carousel-prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="project-carousel-next" onclick="plusSlides(1)">&#10095;</a>
+
+			<script>
+				var slideIndex = 0;
+				var showSlidesVar;
+				showSlidesAuto();
+
+				// next/previous controls
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
+
+				function showSlidesAuto() {
+					showSlidesVar = setTimeout(showSlides, 90, slideIndex); // Change image every 9 seconds
+				}
+
+				function showSlides(n) {
+					slideIndex = n;
+					clearTimeout(showSlidesVar);
+					var i;
+					var slides = document.getElementsByClassName("project-carousel-slides");
+					var dots = document.getElementsByClassName("dot");
+					if (n >= slides.length) {
+						slideIndex = 0
+					}
+					if (n < 0) {
+						slideIndex = slides.length - 1;
+					}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace("active", "");
+					}
+					slides[slideIndex].style.display = "block";
+					dots[slideIndex].className += "active";
+					showSlidesVar = setTimeout(showSlides, 5000, slideIndex + 1); // Change image every 9 seconds
+				}
+
+			</script>
+
+		</article>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot " onclick="currentSlide(0)"></span>
+			<span class="dot " onclick="currentSlide(1)"></span>
+			<span class="dot " onclick="currentSlide(2)"></span>
 		</div>
-		<div class="project-carousel-slides fade">
-			<img src="publications/crc.jpg" alt="projects" style="width:1000px;height:400px;">
-			<div class="project-carousel-text">Real-time Radiance Caching using Chrominance Compressions</div>
-		</div>
-		<div class="project-carousel-slides fade">
-			<img src="publications/teaserSeh.jpg" alt="projects" style="width:1000px;height:400px;">
-			<div class="project-carousel-text">Light Optimization for Detail Highlighting</div>
-		</div>
-		<a class="project-carousel-prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class="project-carousel-next" onclick="plusSlides(1)">&#10095;</a>
 
-		<script>
-			var slideIndex = 0;
-			var showSlidesVar;
-			showSlidesAuto();
+		<article style='max-width:1000px;margin:auto;'>
+			<h2>Welcome to my personal webpage!</h2>
+			<p>
+				Hello, my name is Anastasios Gkaravelis and i was born in Larissa, Greece in 1989. I am a computer
+				graphics
+				reasearcher and developer.
+				I received my B.Sc. and M.Sc. in Computer Science from the Department of Informatics at the Athens
+				University of
+				Economics and Business and a Ph.D. on the field of Computer Graphics in 2019 from the same department,
+				under
+				the
+				supervision of Prof. Georgios Papaioannou.
+				The subject of my doctoral thesis was "Efficient Algorithms for Inverse Lighting Design".
+			</p>
 
-			// next/previous controls
-			function plusSlides(n) {
-				showSlides(slideIndex += n);
-			}
+			<p>
+				I have served as a researcher and developer in national and European projects and worked in the industry
+				delivering projects on high performance computing and real-time visualization of large-volume 3D data.
+			</p>
 
-			function currentSlide(n) {
-				showSlides(slideIndex = n);
-			}
+			<p>
+				My research interests are focused on computer graphics and, in particular, real-time and offline global
+				illumination algorithms, photorealistic rendering and inverse design problems.
+			</p>
+		</article>
 
-			function showSlidesAuto() {
-				showSlidesVar = setTimeout(showSlides, 90, slideIndex); // Change image every 9 seconds
-			}
-
-			function showSlides(n) {
-				slideIndex = n;
-				clearTimeout(showSlidesVar);
-				var i;
-				var slides = document.getElementsByClassName("project-carousel-slides");
-				var dots = document.getElementsByClassName("dot");
-				if (n >= slides.length) {
-					slideIndex = 0
-				}
-				if (n < 0) {
-					slideIndex = slides.length - 1;
-				}
-				for (i = 0; i < slides.length; i++) {
-					slides[i].style.display = "none";
-				}
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace("active", "");
-				}
-				slides[slideIndex].style.display = "block";
-				dots[slideIndex].className += "active";
-				showSlidesVar = setTimeout(showSlides, 5000, slideIndex + 1); // Change image every 9 seconds
-			}
-
-		</script>
-
-	</article>
-	<br>
-
-	<!-- The dots/circles -->
-	<div style="text-align:center">
-		<span class="dot " onclick="currentSlide(0)"></span>
-		<span class="dot " onclick="currentSlide(1)"></span>
-		<span class="dot " onclick="currentSlide(2)"></span>
-	</div>
-
-	<article style='max-width:1000px;margin:auto;'>
-		<h2>Welcome to my personal webpage!</h2>
-		<p>
-			Hello, my name is Anastasios Gkaravelis and i was born in Larissa, Greece in 1989. I am a computer graphics
-			reasearcher and developer.
-			I received my B.Sc. and M.Sc. in Computer Science from the Department of Informatics at the Athens
-			University of
-			Economics and Business and a Ph.D. on the field of Computer Graphics in 2019 from the same department, under
-			the
-			supervision of Prof. Georgios Papaioannou.
-			The subject of my doctoral thesis was "Efficient Algorithms for Inverse Lighting Design".
-		</p>
-
-		<p>
-			I have served as a researcher and developer in national and European projects and worked in the industry
-			delivering projects on high performance computing and real-time visualization of large-volume 3D data.
-		</p>
-
-		<p>
-			My research interests are focused on computer graphics and, in particular, real-time and offline global
-			illumination algorithms, photorealistic rendering and inverse design problems.
-		</p>
-	</article>
+	</main>
 
 	<footer>
-		<small>Anastasios Gkaravelis &copy; 2020
-			<nav>
-				<a href="projects.html">Projects</a>
-				<a href="publications.html">Publications</a>
-				<a href="resume.html">Resume</a>
-				<a href="about.html">About</a>
-			</nav>
+		<div>
+			<a class="github-btn" href="https://github.com"><img src="images/GitHub-Mark-64px.png" width="24pt"></a>
+			<a class="github-btn" href="https://github.com"><img src="images/GitHub-Mark-64px.png" width="24pt"></a>
+			<a class="github-btn" href="https://github.com"><img src="images/GitHub-Mark-64px.png" width="24pt"></a>
+		</div>
+
+		<small style="text-align: right;">Anastasios Gkaravelis &copy; 2020</small>
 	</footer>
 
 </body>
