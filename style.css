@@ -348,6 +348,7 @@ display: block;
 padding: 3px;
 height:16px;
 width:16px;
+box-sizing: content-box;
 }
 
 .pub-media-item a.pub-media-ref:hover {
