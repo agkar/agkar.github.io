@@ -84,6 +84,21 @@ footer {
 	vertical-align: middle;
 }
 
+a {
+	color: firebrick;
+	text-decoration: none;
+}
+
+a:visited {
+	color: firebrick;
+	text-decoration: none;
+}
+
+a:hover {
+	color: firebrick;
+	text-decoration: underline;
+}
+
 /* On screens that are 992px or less, set the background color to blue */
 /*@media screen and (max-width: 992px) {*/
 @media screen and (max-width: 910px) {
