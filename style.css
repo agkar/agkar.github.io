@@ -84,17 +84,17 @@ footer {
 	vertical-align: middle;
 }
 
-a {
+p a {
 	color: firebrick;
 	text-decoration: none;
 }
 
-a:visited {
+p a:visited {
 	color: firebrick;
 	text-decoration: none;
 }
 
-a:hover {
+p a:hover {
 	color: firebrick;
 	text-decoration: underline;
 }
@@ -386,7 +386,7 @@ border-color: #999;
 }
 
 .pub-media-item .pub-media-paper, .pub-media-bibtex, .pub-media-video, .pub-media-presentation {
-background: url("pub_media2.png") 0 0 no-repeat;
+background: url("images/pub_media2.png") 0 0 no-repeat;
 color: transparent;
 display: block;
 font: 0/0 a;
