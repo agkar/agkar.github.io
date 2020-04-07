@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>A. Gkaravelis | Project List</title>
+    <meta name="description" content="A. Gkaravelis personal website">
+    <meta name="keywords"
+        content="anastasios, gkaravelis, phd, graphics, aueb, inverse-lighting, rendering, perceptual, opengl, webgl, gepap, athens, larisa">
+    <meta name="author" content="Anastasios Gkaravelis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon1.jpg" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162812266-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162812266-1');
+    </script>
+
+</head>
+
+
+<body id="top">
+    <header>
+        <nav>
+            <a class="site-links" href="index.html">Home</a> |
+            <a class="site-links" href="projects.html">Projects</a> |
+            <a class="site-links" href="publications.html">Publications</a> |
+            <a class="site-links" href="resume.html">Resume</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Project List</h1>
+
+        <h2>Selected Research Projects</h2>
+
+        <article class="project-style">
+            <a href="http://presious.eu/">
+                <img class="project-thumbnail" src="projects/presious.jpg" alt="project3">
+            </a>
+            <div class="project-description">
+                <div class="project-title">PRESIOUS (2013 - 2016)
+                </div>
+                <div class="project-abstract">Predictive digitization, restoration and degradation assessment of
+                    cultural
+                    heritage objects
+                    3-year EU- funded STREP project (grant no. 600533), 2013-2016.
+                </div>
+            </div>
+        </article>
+
+        <br>
+
+        <article class="project-style">
+            <a href="http://glide.aueb.gr/">
+                <img class="project-thumbnail" src="projects/glide.jpg" alt="project3">
+            </a>
+            <div class="project-description">
+                <div class="project-title">GLIDE (2014 - 2015)
+                </div>
+                <div class="project-abstract">Goal-driven Lighting for Dynamic 3D Environments (ARISTEIA || programme)
+                    18-month research project co-funded by the General Secreteriat of Research and Technology and the
+                    European Union, 2014-2015.
+                </div>
+            </div>
+        </article>
+
+        <h2> Selected Personal Projects </h2>
+
+        <article class="project-style">
+            <img class="project-thumbnail" src="projects/gpuray.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">GPU Pathtracer Engine (2015-Present)
+                </div>
+                <div class="project-abstract">A GPU path tracer using next event estimation and importance sampling.
+                    Written in C++ and CUDA and utilizes the <a href="https://developer.nvidia.com/optix"
+                        target="__blank">Optix</a> framework to accelerate ray-tracing intersections.
+                </div>
+            </div>
+        </article>
+
+        <article class="project-style">
+            <div style="width: 300px;margin:0 20px 0 0;">
+            <img class="project-thumbnail" src="images/XEngine_dark_small.png" alt="project2">
+            </div>
+            <div class="project-description">
+                <div class="project-title">XEngine (2013-Present)
+                </div>
+                <div class="project-abstract">I collaborated in the development of the in-house graphics engine of the
+                    computer graphics lab in AUEB University.
+                    Additionally, for the requirements of the <a href="http://glide.aueb.gr" target="__blank">GLIDE</a> project, i extended the original engine to allow the
+                    specification of user-provided lighting contraints by painting directly on the geometry and
+                    calculate the lighting configuration that produces a matching illumination result.
+                    <!--A fully functional application for calculating light the configuration of punctual light sources in a 3D environment using user-provided lighting constraints by painting then in the GUI directly on the geometry-->
+                </div>
+            </div>
+        </article>
+
+        <br>
+
+        <article class="project-style">
+            <img class="project-thumbnail" src="projects/gpuraster.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">3D Graphics Engine (2012-Present)
+                </div>
+                <div class="project-abstract">A rendering engine written in C++ and OpenGL. It uses deferred shading
+                    techniques to render objects and shadow maps for shadowing. It also supports Dynamic Lights,
+                    BillBoards, Particle System, 2D Gui, Enviroment Mapping,
+                    Normal Mapping, Post-Processing Effects, View-Frustum Culling and an Obj / Mtl loader.
+                </div>
+            </div>
+        </article>
+
+        <br>
+
+        <h2> Selected Academic Projects </h2>
+
+        <article class="project-style">
+            <img class="project-thumbnail" src="projects/iot.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">IoT Project (2015)
+                </div>
+                <div class="project-abstract">We created a platform that controls a cluster of programmable sensors. It
+                    elects periodicaly one sensor to be the data aggregator, in order to minimize the cluster's energy
+                    consumption. The sensors listen to commands through Sockets and were programmed in C++ using <a
+                        href="https://riot-os.org/">RIOT OS</a>.
+                </div>
+            </div>
+        </article>
+
+        <br>
+
+        <article class="project-style">
+            <img class="project-thumbnail" src="projects/dropAladeen.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">Aladeen Project (2015)
+                </div>
+                <div class="project-abstract">An application platform, similar to Shazam, that given a small video
+                    segment it
+                    finds its origin from a video database. The application loads and hashes the video segment and sends
+                    the hash to a Server to compare it against a video database.
+                    It was developed in C++ using <a href="https://www.qt.io/">Qt</a>, <a
+                        href="https://opencv.org/">OpenCV</a>, <a href="https://www.phash.org/">pHash</a> and Sockets to
+                    connect the Client and the Server.
+                </div>
+            </div>
+        </article>
+
+        <br>
+
+        <article class="project-style">
+            <img class="project-thumbnail" src="projects/FitTorrent.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">BitTorrent Client (2014)
+                </div>
+                <div class="project-abstract">A full featured BitTorrent client and tracker, that has the ability to
+                    connect to many other clients and transfer various files simultaneously, using Java threads,
+                    Sockets and Java Swing.
+                </div>
+            </div>
+        </article>
+
+        <br>
+
+        <!--<article class="project-style">
+            <img class="project-thumbnail" src="projects/mario.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">Super Maryo Clone for Android (2012)
+                </div>
+                <div class="project-abstract">We created a game similar to the classic Super Mario game for the Android
+                    Platform. It
+                    featured 3 Mario transformations, enemies and a number of levels. We also used profiling and java
+                    memory
+                    analyzers to counter a few bottlenecks in our program and optimize it's performance.
+                </div>
+            </div>
+        </article>-->
+
+        <br>
+
+        <article class="project-style">
+            <img class="project-thumbnail" src="projects/traffic.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">Traffic Monitor for Android (2011)
+                </div>
+                <div class="project-abstract">
+                    An Android application that can estimate the travel time of a route, using various travel methods,
+                    at a specific time of day. The estimation is based on previously stored routes from users.
+                    Each user application is connected to a custom Server, written in Java, and the travel time
+                    estimation is calculated using a MapReduce technique to process data from other mobile phones about
+                    traffic status and
+                    distribute work across connected mobile devices.
+
+                    <!--An Adroid application that utilizes previously stored user's routes and perform queries on them to estimate the duration of a requested new route. 
+
+                    We created a server in Java, where all mobile phones were connected to and we used MapReduce technique to process data from other mobile phones about traffic status and
+                    distribute work across mobile devices.-->
+                </div>
+            </div>
+        </article>
+
+        <br>
+
+        <article class="project-style">
+            <img class="project-thumbnail" src="projects/airshipfighters.jpg" alt="project2">
+            <div class="project-description">
+                <div class="project-title">AirShip Fighters (2011)
+                </div>
+                <div class="project-abstract">A 3D game using C++ and OpenGL. The player controls an airship
+                    and
+                    should get to the treasure chest in order to win. There are randomly spawned enemies that are trying
+                    to take
+                    him
+                    down. The player can shoot down the enemies using a mounted cannon on the airship or using rockets
+                    found in power up boxes. Other powerups can also assist the player such as slow-time. The game also
+                    features a weather and particle system.
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <div>
+            <a class="github-btn" href="https://github.com/agkar"><img src="images/GitHub-Mark-64px.png"
+                    width="24pt"></a>
+            <a class="github-btn" href="https://twitter.com/anastasios_Gk"><img
+                    src="images/Twitter_Social_Icon_Circle_Color.png" width="24pt"></a>
+            <a class="github-btn" href="mailto:a.gkaravelis@gmail.com" target="_top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20pt" height="20pt" viewBox="-4 -8 30 32" fill="none"
+                    stroke="rgb(20,20,20)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M0 0 L20 0 L20 20 L0 20 L0 0 L10 8 L20 0"></path>
+                    <!--<rect x="0" y="0" width="100%" height="100%"/>-->
+                </svg>
+            </a>
+        </div>
+
+        <small style="text-align: right;">Anastasios Gkaravelis &copy; 2020</small>
+    </footer>
+
+</body>
+
+</html>

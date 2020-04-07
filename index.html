@@ -1,137 +1,154 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-<title>A. Gkaravelis | Resume</title>
-<meta name="description" content="A. Gkaravelis personal website">
-<meta name="keywords" content="anastasios, gkaravelis, phd, graphics, aueb, inverse-lighting, rendering, perceptual, opengl, webgl, gepap, athens, larisa">
-<meta name="author" content="Anastasios Gkaravelis">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--<link rel="icon" href="images/icon1.jpg" type="image/x-icon">-->
-<link rel="icon" href="images/icon1.jpg">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<title>A. Gkaravelis | Personal Website</title>
+	<meta name="description" content="A. Gkaravelis personal website">
+	<meta name="keywords"
+		content="anastasios, gkaravelis, phd, graphics, aueb, inverse-lighting, rendering, perceptual, opengl, webgl, gepap, athens, larisa">
+	<meta name="author" content="Anastasios Gkaravelis">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/icon1.jpg" type="image/x-icon">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162812266-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-162812266-1');
+	</script>
+
 </head>
 
 
 <body id="top">
-<header>
-<nav> 
-<a class="site-links" href="index.html">Home</a> |
-<a class="site-links" href="projects.html">Projects</a> |
-<a class="site-links" href="publications.html">Publications</a> |
-<a class="site-links" href="resume.html">Resume</a> |
-<a class="site-links" href="about.html">About</a>
-</nav>
+	<header>
+		<nav>
+			<a class="site-links" href="index.html">Home</a> |
+			<a class="site-links" href="projects.html">Projects</a> |
+			<a class="site-links" href="publications.html">Publications</a> |
+			<a class="site-links" href="resume.html">Resume</a>
+		</nav>
+	</header>
 
-</header>
+	<main>
+		<article class="project-carousel-container">
+			<div class="project-carousel-slides fade">
+				<img src="publications/seh.jpg" alt="projects" style="width:1000px;height:400px;">
+				<div class="project-carousel-text">Detail Highlighting using a Shadow Edge Histogram</div>
+			</div>
+			<div class="project-carousel-slides fade">
+				<img src="publications/crc.jpg" alt="projects" style="width:1000px;height:400px;">
+				<div class="project-carousel-text">Real-time Radiance Caching using Chrominance Compressions</div>
+			</div>
+			<div class="project-carousel-slides fade">
+				<img src="publications/teaserSeh.jpg" alt="projects" style="width:1000px;height:400px;">
+				<div class="project-carousel-text">Light Optimization for Detail Highlighting</div>
+			</div>
+			<a class="project-carousel-prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="project-carousel-next" onclick="plusSlides(1)">&#10095;</a>
 
+			<script>
+				var slideIndex = 0;
+				var showSlidesVar;
+				showSlidesAuto();
 
+				// next/previous controls
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
 
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
 
-<main class="resume-content">
+				function showSlidesAuto() {
+					showSlidesVar = setTimeout(showSlides, 90, slideIndex); // Change image every 9 seconds
+				}
 
-<h1>Resume</h1>
+				function showSlides(n) {
+					slideIndex = n;
+					clearTimeout(showSlidesVar);
+					var i;
+					var slides = document.getElementsByClassName("project-carousel-slides");
+					var dots = document.getElementsByClassName("dot");
+					if (n >= slides.length) {
+						slideIndex = 0
+					}
+					if (n < 0) {
+						slideIndex = slides.length - 1;
+					}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace("active", "");
+					}
+					slides[slideIndex].style.display = "block";
+					dots[slideIndex].className += "active";
+					showSlidesVar = setTimeout(showSlides, 5000, slideIndex + 1); // Change image every 9 seconds
+				}
 
+			</script>
 
-<!-- Work Experience -->
+		</article>
+		<br>
 
-<section class="resume-type"> Work Experience</section>
-<aside class="resume-data"> 
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot " onclick="currentSlide(0)"></span>
+			<span class="dot " onclick="currentSlide(1)"></span>
+			<span class="dot " onclick="currentSlide(2)"></span>
+		</div>
 
-<p class="resume-entry-title"><a href="https://www.nomitech.eu/" target="_blank">Nomitech LTD</a> <span> (Aug 2016 - Dec 2019)</span></p>
-<p class="resume-entry">Design and develop a high performance architectural model rendering engine. with support for manipulating models and measuring geometric quantities.</p>
+		<article style='max-width:1000px;margin:auto;'>
+			<h2>Welcome to my personal webpage!</h2>
+			<p>
+				Hello, my name is Anastasios Gkaravelis and i am a computer graphics reasearcher and developer.
+				I was born in Larissa, Greece in 1989.
+				I received my B.Sc. and M.Sc. in <em>Computer Science</em> from the Department of Informatics at the
+				<a href="https://www.aueb.gr" target="__blank">Athens
+					University of
+					Economics and Business</a> and a Ph.D. on the field of <a href="http://graphics.cs.aueb.gr" target="__blank">Computer Graphics</a> in 2019 from the
+				same
+				department,
+				under the supervision of Prof. Georgios Papaioannou.
+				The subject of my doctoral thesis was "<em>Efficient Algorithms for Inverse Lighting Design</em>".
+			</p>
 
-<p class="resume-entry-title"><a href="https://www.aueb.gr/" target="_blank">Athens University of Economics and Business</a> <span>(Mar 2014 - Apr 2016)</span></p>
-<p class="resume-entry"> Research and develop a lighting design tool for placing and optimizing light sources inside a three-dimensional environment using NVIDIA Optix framework and taking advantage of multi-threading systems.</p>
+			<p>
+				I have served as a researcher and developer in national and European projects and worked in the industry
+				delivering projects on high performance computing and real-time visualization of large-volume 3D data.
+			</p>
 
-<p class="resume-entry-title"><a href="http://www.intracom-telecom.com/" target="_blank">Intracom-Telecom, R&amp;D Department</a>  <span>(Sept 2013 - Apr 2016)</span></p>
-<p class="resume-entry"> Designed and created a distributed application using the Storm framework for monitoring and analyzing systems in real time. </p>
+			<p>
+				My research interests are focused on computer graphics and, in particular, real-time and offline global
+				illumination algorithms, photorealistic rendering and inverse design problems.
+			</p>
+		</article>
 
-<p class="resume-entry-title">Intern at <a href="http://www.intracom-telecom.com/" target="_blank">Intracom-Telecom, R&amp;D Department</a> <span>(2013)</span></p>
-<p class="resume-entry"><strong>Intern</strong> | Designed and created a distributed application using the Storm framework for analyzing IPTV usage data in real time. </p>
+	</main>
 
-</aside>
+	<footer>
+		<div>
+			<a class="github-btn" href="https://github.com/agkar"><img src="images/GitHub-Mark-64px.png"
+					width="24pt"></a>
+			<a class="github-btn" href="https://twitter.com/anastasios_Gk"><img
+					src="images/Twitter_Social_Icon_Circle_Color.png" width="24pt"></a>
+			<a class="github-btn" href="mailto:a.gkaravelis@gmail.com" target="_top">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20pt" height="20pt" viewBox="-4 -8 30 32" fill="none"
+					stroke="rgb(20,20,20)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M0 0 L20 0 L20 20 L0 20 L0 0 L10 8 L20 0"></path>
+					<!--<rect x="0" y="0" width="100%" height="100%"/>-->
+				</svg>
+			</a>
+		</div>
 
-<!-- Publications -->
-
-<section class="resume-type"> Publications</section>
-<aside class="resume-data"> 
-
-<p class="resume-entry-title"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13545" target="_blank">Light Optimization for Detail Highlighting</a> | Computer Graphics Forum, 2018</p>
-<p class="resume-entry">Computer Graphics Forum (proc. Pacific Graphics 2018), 37(7), pp. 37-44, October, 2018.<br>
-<span>Authors: <strong>A. Gkaravelis</strong>, G. Papaioannou</span></p>
-
-<p class="resume-entry-title"><a href="https://diglib.eg.org/handle/10.2312/egsh20171017" target="_blank">Detail Highlighting using a Shadow Edge Histogram</a> | EG (Short), 2017</p>
-<p class="resume-entry">Proc. Eurographics 2017, short paper track, 2017 <br>
-<span>Authors: <strong>A. Gkaravelis</strong>, G. Papaioannou</span></p>
-
-<p class="resume-entry-title"><a href="https://dl.acm.org/citation.cfm?id=2962791" target="_blank">Inverse lighting design using a coverage optimization strategy</a> | Visual Computer, 2016</p>
-<p class="resume-entry">The Visual Computer: International Journal of Computer Graphics, Volume 32, Issue 6-8, pp. 771-780, June 2016 <br>
-<span>Authors: <strong>A. Gkaravelis</strong>, G. Papaioannou</span></p>
-
-<p class="resume-entry-title"><a href="https://dl.acm.org/citation.cfm?id=3021640.3021643" target="_blank">Inverse Light Design for High-Occlusion Environments</a> | GRAPP, 2015</p>
-<p class="resume-entry">GRAPP 2015 Proceedings of the 10th International Conference on Computer Graphics Theory and Applications
-, pp. 26-34, Berlin, Germany <br>
-<span>Authors: <strong>A. Gkaravelis</strong>, G. Papaioannou, K. Kalampokis</span></p>
-
-<p class="resume-entry-title"><a href="http://jcgt.org/published/0003/04/06/" target="_blank">Real-time Radiance Caching using Chrominance Compression</a> | JCGT, 2015</p>
-<p class="resume-entry">Journal of Computer Graphics Techniques (JCGT) - presented at i3D 2015.<br>
-<span>Authors: K. Vardis, G. Papaioannou, <strong>A. Gkaravelis</strong></span></p>
-
-</aside>
-
-<!-- Teaching Experience -->
-
-<section class="resume-type"> Teaching Experience</section>
-<aside class="resume-data"> 
-
-<p class="resume-entry-title">HCI, Computer Vision <span>(2015-2018)</span></p>
-<p class="resume-entry">Lab sessions and practical courses using Matlab, C++ and OpenCV</p>
-
-<p class="resume-entry-title">Machine Learning <span>(2016 - 2017)</span></p>
-<p class="resume-entry"> Lab sessions and practical courses using Matlab</p>
-
-<p class="resume-entry-title">Computer Graphics <span>(Sept 2013 - Apr 2019)</span></p>
-<p class="resume-entry"> Lab sessions and practical courses using C++ and OpenGL 3.3. </p>
-
-<p class="resume-entry-title">Programming with C++ <span>(2017)</span></p>
-<p class="resume-entry">Lab sessions and practical courses on C++. </p>
-
-</aside>
-
-<!-- Education -->
-
-<section class="resume-type"> Education</section>
-<aside class="resume-data"> 
-
-<p class="resume-entry-title"><a href="https://www.aueb.gr/" target="_blank">Athens University of Economics and Business</a>  <span>(2019)</span></p>
-<p class="resume-entry">Ph.D. in Computer Graphics, Department of Informatics</p>
-
-<p class="resume-entry-title"><a href="https://www.aueb.gr/" target="_blank">Athens University of Economics and Business</a>  <span>(2016)</span></p>
-<p class="resume-entry">  M.Sc. in Computer Science, Department of Informatics (Grade 8.84)</p>
-
-<p class="resume-entry-title"><a href="https://www.aueb.gr/" target="_blank">Athens University of Economics and Business</a> <span>(2013)</span></p>
-<p class="resume-entry"> B.Sc. in Computer Science, Department of Informatics (Grade 7.17)</p>
-
-</aside>
-
-<p></p>
-<p></p>
-
-<br>
-
-</main>
-
-
-<footer> 
-<small>&copy; My website <a href="#top">Back to top</a>
-<nav> 
-<a href="projects.html">Projects</a>
-<a href="publications.html">Publications</a>
-<a href="resume.html">Resume</a>
-<a href="about.html">About</a>
-</nav>
-</footer>
+		<small style="text-align: right;">Anastasios Gkaravelis &copy; 2020</small>
+	</footer>
 
 </body>
 
