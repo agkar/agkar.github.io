@@ -28,6 +28,7 @@ body {
 main {
 	max-width: 1000px;
 	margin:auto;
+	padding: 0 5px;
 }
 
 header {
@@ -71,6 +72,7 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 36pt;
+	padding: 0 5px;
 }
 
 
