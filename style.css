@@ -184,6 +184,12 @@ margin:auto;
 display: none;
 }
 
+.project-carousel-slides img {
+	width:100%;
+	height:400px;
+	max-height: 70vh;
+}
+
 .project-carousel-prev, .project-carousel-next {
 cursor:pointer;
 position:absolute;
