@@ -106,13 +106,6 @@ p a:hover {
 	text-decoration: underline;
 }
 
-/* On screens that are 992px or less, set the background color to blue */
-/*@media screen and (max-width: 992px) {*/
-@media screen and (max-width: 910px) {
-
-}
-
-
 /*   PROJECTS   */
 
 .project-style {
@@ -211,12 +204,12 @@ user-select:none;
 }
 
 .project-carousel-next {
-right: 0;
-border-radius:3px 0 0 3px;
+  right: 0;
+  border-radius:3px 0 0 3px;
 }
 
 .project-carousel-prev:hover, .project-carousel-next:hover {
-background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.8);
 }
 
 .project-carousel-text {
@@ -242,7 +235,7 @@ transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-background-color: #717171;
+	background-color: #717171;
 }
 
 /* fading animation*/
@@ -283,7 +276,7 @@ max-width:200px;
 }
 
 .resume-type::before {
-clear: both;	
+	clear: both;
 }
 
 .resume-data {
