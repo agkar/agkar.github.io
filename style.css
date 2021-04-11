@@ -334,33 +334,32 @@ float : right;
   .resume-content {
 	margin: auto;
 	width: 100%;
-}
+	}
 
-.resume-type {
-float: none;
-margin: 1.5% 1.5% 0 3.5%;
-margin: 0;
-width: auto;
-max-width: none;
-}
+  .resume-type {
+    float: none;
+    margin: 1.5% 1.5% 0 3.5%;
+	margin: 0;
+	width: auto;
+	max-width: none;
+  }
 
-.resume-type::before {
-clear: both;	
-}
+  .resume-type::before {
+	clear: both;	
+  }
 
-.resume-data {
-float: none;
-margin-top: 0;
-margin-left: 3.5%;
-width: auto;
-max-width:none;
-}
+  .resume-data {
+	float: none;
+	margin-top: 0;
+	margin-left: 3.5%;
+	width: auto;
+	max-width:none;
+  }
 
-.resume-entry-title {
-margin-bottom: -12px;
-overflow:hidden;
-}
-
+  .resume-entry-title {
+	margin-bottom: -12px;
+	overflow:hidden;
+  }
 }
 
 .pub-media-container {
