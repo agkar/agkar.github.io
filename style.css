@@ -5,16 +5,20 @@
 html, body {
 	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	/*font-family: "Roboto", "Lucida Grande", Helvetica, Arial, sans-serif*/
+
+	--href-link: rgb(201,44,4);
+	--href-link-hover: firebrick;
+	--text-color: rgb(20,20,20);
 }
 
 p {
-	color: rgb(20,20,20);
+	color: var(--text-color);
 	font-size: 16px;
 	text-align: justify;
 }
 
 h1, h2, h3, h4 {
-	color: rgb(20,20,20);
+	color: var(--text-color);
 }
 
 body {
@@ -45,6 +49,7 @@ outline: 0;
 margin-bottom: 12pt; /*12pt = 16px*/
 /* New addition for border */
 /*border-bottom: 3px solid orange;*/
+background: linear-gradient(hsl(0, 0%, 33%), hsl(0,0%,8%));
 }
 
 nav {
@@ -87,17 +92,17 @@ footer {
 }
 
 p a {
-	color: firebrick;
+	color: var(--href-link);
 	text-decoration: none;
 }
 
 p a:visited {
-	color: firebrick;
+	color: var(--href-link);
 	text-decoration: none;
 }
 
 p a:hover {
-	color: firebrick;
+	color: var(--href-link-hover);
 	text-decoration: underline;
 }
 
@@ -150,7 +155,7 @@ p a:hover {
 .project-title {
 	font-size: 12pt;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:rgb(201,44,4);
+	color: var(--href-link);
 	padding-top: 10px;
 	padding-right: 10px;
 	display: block;
@@ -158,17 +163,17 @@ p a:hover {
 }
 
 .project-description a {
-	color: firebrick;
+	color: var(--href-link);
 	text-decoration: none;
 }
 
 .project-description a:visited {
-	color: firebrick;
+	color: var(--href-link);
 	text-decoration: none;
 }
 
 .project-description a:hover {
-	color: firebrick;
+	color: var(--href-link-hover);
 	text-decoration: underline;
 }
 
@@ -271,7 +276,7 @@ to {opacity: 1}
 float: left;
 margin: 1.5% 1.5% 0 3.5%;
 width: 30%;
-color: rgb(20,20,20);
+color: var(--text-color);
 font-size: 20px;
 font-size: 15pt;
 max-width:200px;
@@ -288,7 +293,7 @@ margin-top: 1.5%;
 margin-left: 0;
 padding: 4px 0 0 0;
 width: 63%;
-color: rgb(20,20,20);
+color: var(--text-color);
 max-width:560px;
 }
 
@@ -300,7 +305,7 @@ margin-bottom: -14px;
 .resume-entry-title a {
 font-weight: bold;
 margin-bottom: -14px;
-color:rgb(201,44,4);
+color: var(--href-link);
 text-decoration : none;
 }
 
@@ -357,15 +362,6 @@ overflow:hidden;
 }
 
 }
-
-
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
-  /*.resume-content h1 {
-    background-color: olive;
-  }*/
-}
-
 
 .pub-media-container {
 margin: 0;
