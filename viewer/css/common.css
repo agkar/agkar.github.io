@@ -1,0 +1,196 @@
+body {
+  background-color: #ffffff;
+  font: 1rem/1.4 -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  left: 0px;
+  text-align: left;
+  /*max-width: 420px;*/
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.90);
+  margin-bottom: 0.5em;
+  border-radius: 2px;
+}
+
+details summary {
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+details[open] summary {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+header h1 {
+  margin-top: 0px;
+}
+
+.back {
+  float: right;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.back::before {
+  display: inline-block;
+  content: attr(data-index) '<';
+  font-weight: bold;
+  white-space: nowrap;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+}
+
+/* Used for the 'barebones' samples */
+.barebones-button {
+  font-family: "Karla", sans-serif;
+  border: rgb(80, 168, 252) 2px solid;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background: none;
+  height: 55px;
+  min-width: 176px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(80, 168, 252);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.barebones-button:disabled {
+  border: rgb(102, 108, 114) 2px solid;
+  cursor: not-allowed;
+  color: rgb(102, 108, 114);
+}
+
+.phasmatic-wgl2-canvas {
+  display: block;
+  /*max-width: 512px;*/
+  height: 780px;
+  width: min(90%, 1280px);
+  position: initial;
+  margin:auto;
+}
+
+div.phasmatic-wgl2-canvas {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  text-align: center;
+  align-items: center;
+}
+
+
+/* ---------- Useful Button styling ---------- */
+
+#animation_button{
+  width: min-content;
+  position: relative;
+  background-color: #2699ab;
+  border-radius: 1em;
+  font-size: 16px;
+  color: white;
+  margin: 1em 1em 1em 1em;
+  padding: 0.8em 1.8em;
+  cursor:pointer;
+  user-select:none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+#animation_button:hover {
+  transition-duration: 0.1s;
+  background-color: #228999;
+}
+
+#animation_button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+#animation_button:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  opacity: 1;
+  transition: 0s;
+}
+
+#animation_button:active {
+  top: 1px;
+}
+
+#variant_button{
+  width: min-content;
+  position: relative;
+  background-color: #2699ab;
+  border-radius: 1em;
+  font-size: 16px;
+  color: white;
+  margin: 1em 1em 1em 1em;
+  padding: 0.8em 1.8em;
+  cursor:pointer;
+  user-select:none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+#variant_button:hover {
+  transition-duration: 0.1s;
+  background-color: #228999;
+}
+
+#variant_button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+#variant_button:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  opacity: 1;
+  transition: 0s;
+}
+
+#variant_button:active {
+  top: 1px;
+}

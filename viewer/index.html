@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="#">
+
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <!--<link rel='icon' type='image/png' sizes='32x32' href='favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='96x96' href='favicon-96x96.png'>-->
+    <link rel='stylesheet' href='css/common.css'>
+
+    <title>Phasmatic Viewer</title>
+  </head>
+  <body>
+
+    <!--<canvas id="canvas3" width="320" height="320"/>-->
+    <!--<h2 id='header_title' style="text-align: center;">PhasmaViewer3D v1.1</h2>-->
+    <main>
+      <!--
+        Supported attributes:
+        alt,                          Specifies an alternate text for the viewer
+        src,                          Specifies the path to the 3D model
+        env-image,                    Specifies the path to the environment image
+        env-image-blur,               Enables the blur of the environment image. Options: "true"
+        env-intensity,                Specifies the intensity of the environment image. Default: 2.0
+        loading,                      Specifies the loading options. Options: "lazy" - load on click (default), "eager" - load immediately
+        pp-sharpen,                   Enables the sharpening postprocess filter. Specifies the strength of the effect. Default: 0.0 (not enabled)
+        pp-vignette,                  Enables the vignette postprocess filter. Specifies the strength of the effect. Default: 0.0 (not enabled)
+        pp-filmgrain,                 Enables the filmgrain postprocess filter. Specifies the strength of the effect. Default: 0.0 (not enabled)
+        pp-tonemapping,               Enables the tonemapping postprocess filter. Specifies the mode of the effect. Options: 'gammma', 'filmic', 'aces_filmic', 'reinhard', 'uncharted'.  Default: 'gammma'
+        camera-enable-controls,       Enables the camera controls.
+        camera-smooth-rotation,       Specifies the continuation of the camera rotation. Default: 0.05
+        camera-disable-zoom,          Disables the zooming functionality. 
+        camera-auto-rotate,           Enables the auto rotation of the 3D model
+        camera-auto-rotate-speed,     Specifies the rotation speed in degrees of the auto rotation mode. Input: "Yaw, Pitch" (in degrees)
+        camera-interpolate,           Enable the interpolation from the default point of view to a user-specified, after the initialization of the viewer
+        camera-interpolate-duration,  Specifies the duration in seconds of the interpolation
+        camera-interpolate-cycle,     Specifies the point of view that will be the target during the interpolation. Input: "Yaw, Pitch, Zoom" - angles are in degrees, zoom is in meters
+        camera-target,                Specifies the target that the camera will orbit around. Input: "X Y Z". "XYZ" are in meters. (auto = default position at the center of the object).
+        camera-min-orbit,             Specifies the minimum permitted orbit angles of the camera movement. Input: "auto, auto, Zoom" (Yaw, Pitch, Zoom) (Yaw and pitch are in degrees, Zoom is in meters) (auto = default)
+                                      Currently only minimum zoom can be specified
+        ray-tracing,                  Enables the ray-tracing pipeline of the viewer
+        background-color,             Specifies the background color. Input: "rgb(r,g,b)", "rgba(r,g,b,a)", where r/g/b/a are in [0,255] or use a hex color "#xxxxxx"
+        background-image,             Specifies the background texture.
+        ground-shadow,                Enables the ground shadow feature. Input: "size", where "size" refers to the ground plane size in relation to the model's bbox. 
+        immersive                     Enables XR visualization options. Input: "VR", "AR", "XR", where XR enables both VR & AR.
+        ui-fullscreen,                Enables the fullscreen functionality.
+      -->
+      <style>
+        phasma-viewer {
+          width: 720px;     
+          height: 720px;
+        }
+        .container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          height: 100%;
+          width: 100%;
+          /*outline: 1px solid blue;*/
+        }
+      </style>
+      <div class="container">
+      <!-- Use it as a regular HTML Element-->
+      <canvas id="ag_canvas" width="512" height="512"/>
+      <phasma-viewer 
+                    id="ph_id"
+                    customerID="anastasiosDev"
+                    alt="old trailer Kzap 8140"
+                    src="gltf/trailer_anim.gltf"
+                    poster="images/trailer_poster.jpg"
+                    env-image="textures/forest.jpg"
+                    env-intensity="1.0"
+                    env-image-blur="true"
+                    camera-enable-controls
+                    2camera-min-orbit="auto, auto, 0.1m"
+                    camera-auto-rotate2
+                    camera-auto-rotate-speed2="1,0"
+                    camera-interpolate2
+                    camera-interpolate-duration="2"
+                    camera-interpolate-cycle="310,15,2.5"
+                    loading="lazy"
+                    immersive2="XR"
+                    background-color2="#FFFFFF"
+                    background-image2="images/trailer-background.jpg"
+                    pp-sharpen2="1.0"
+                    pp-vignette="0.5"
+                    pp-filmgrain="1.0"
+                    ui-fullscreen
+                    ground-shadow="1.1"
+      >
+      </phasma-viewer>
+      </div>
+      <div style='display: flex; flex-direction: row; justify-content: center; align-items: center;'>
+        <button id="animation_button"> Animation </button>
+        <button id="variant_button"> Variant </button>
+      </div>
+    </main>
+
+    <!-- Development Version -->
+
+
+    <!-- Test the compiled version -->
+    <script type="module" src="js/deps/phasmaviewer.js"></script>
+
+    <script type="module">
+      import {WebGLPhasmaViewerEngine, OnLoad} from "./js/deps/phasmaviewer.js";
+      console.log("Script");
+      OnLoad(() => {
+        const canvas = document.getElementById("ag_canvas");
+        const gl = canvas.getContext("webgl2");
+        const engine = new WebGLPhasmaViewerEngine(gl);
+        engine.LoadEnvImage("park_2k.jpg");
+        engine.LoadScene("house.glb");
+        const renderFunc = () => {
+          engine.RotateCamera(0.1, 0);
+          engine.Update();
+          engine.Render();          
+          window.requestAnimationFrame(renderFunc);
+        }
+        window.requestAnimationFrame(renderFunc);
+      })
+      
+      
+      const btn_animation = document.getElementById("animation_button");
+      const phasma_viewer = document.getElementById("ph_id");
+      btn_animation.onclick = () => {
+        phasma_viewer.triggerAnimation("Take 001");
+      };
+
+      let variant_index = 0;
+      const btn_variant = document.getElementById("variant_button");
+      btn_variant.onclick = () => {
+        const variants = phasma_viewer.availableVariants();
+        if(variants.length > 0)
+        {
+          variant_index = variant_index + 1;
+          variant_index = variant_index % variants.length;
+          phasma_viewer.triggerVariant(variants[variant_index]);
+        }
+      };
+    </script>
+    
+  </body>
+</html>
